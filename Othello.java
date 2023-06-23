@@ -1002,9 +1002,9 @@ public class Othello {
                         }
                     }
                     if(master3==0){
-                        System.out.println("invalid move, disqualified");
-                        choki=1;
-                        break;
+                        System.out.println("invalid move, try again");
+                        // choki=1;
+                        continue;
                     } 
                     u.board=u.rearrange_board(u.board, x_c, y_c, 0);
                     System.out.println("updated board after your turn is : ");
@@ -1094,23 +1094,22 @@ public class Othello {
                     System.out.println("No more possible moves for both the parties so the game ends here");
                     break;
                 }
+                // if(choki==1){
+                //     System.out.println("invalid move try again!!!");
+                //     continue;
+                // }
             }
-            if(choki==1){
-                System.out.println("you are disqualified for entering an illegal move");
-            }
+            int no_of_zeroes=u.count_black(u.board);
+            int no_of_ones=u.count_white(u.board);
+            if(no_of_ones>no_of_zeroes){
+                System.out.println("computer wins by "+ no_of_ones+" : "+no_of_zeroes);
+            } 
+            else if(no_of_ones<no_of_zeroes){
+                System.out.println("you won!!!!! by "+ no_of_ones+" : "+no_of_zeroes);
+            } 
             else{
-                int no_of_zeroes=u.count_black(u.board);
-                int no_of_ones=u.count_white(u.board);
-                if(no_of_ones>no_of_zeroes){
-                    System.out.println("computer wins by "+ no_of_ones+" : "+no_of_zeroes);
-                } 
-                else if(no_of_ones<no_of_zeroes){
-                    System.out.println("you won!!!!! by "+ no_of_ones+" : "+no_of_zeroes);
-                } 
-                else{
-                    System.out.println("its a draw!");
-                } 
-            }
+                System.out.println("its a draw!");
+            } 
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
