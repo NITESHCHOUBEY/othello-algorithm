@@ -1105,7 +1105,7 @@ public class Othello {
                     System.out.println("computer wins by "+ no_of_ones+" : "+no_of_zeroes);
                 } 
                 else if(no_of_ones<no_of_zeroes){
-                    System.out.println("you won!!!!! by "+ no_of_ones+" : "+no_of_zeroes);
+                    System.out.println("you won!!!! by "+ no_of_ones+" : "+no_of_zeroes);
                 } 
                 else{
                     System.out.println("its a draw!");
