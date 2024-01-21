@@ -1,4 +1,4 @@
-# othello-game
+# othello-Algorithm
 Play othello against the computer using the mini max algorithm. <br />
 To play, follow these steps:<br />
 1)Save both the filename.txt and othello.java files to your computer.<br />
